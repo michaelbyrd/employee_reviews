@@ -38,10 +38,10 @@ class DepartmentTest < MiniTest::Test
   def test_give_raise_to_a_department
     d = Department.new('example')
     e = Employee.new('Joey', 100.00)
-    f = Employee.new('Sally', 1000.00)
+    f = Employee.new('Sally', 900.00)
     d.add_to_employees(e, f)
-    d.give_raise(500.00)
-    assert_equal 1600.00, d.total_salary
+    d.give_raise(1000.00)
+    assert_equal 2000.00, d.total_salary
   end
 
 end

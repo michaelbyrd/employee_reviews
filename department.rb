@@ -15,4 +15,12 @@ class Department
   def total_salary
     @employees.reduce(0.0) {|s, e| s += e.salary }
   end
+
+  def give_raise(dollar_amount)
+    percent = dollar_amount / total_salary * 100
+    @employees.each do |e|
+      e.give_raise(percent)
+    end
+  end
+
 end

@@ -21,6 +21,6 @@ class Employee
   end
 
   def give_raise(percent)
-    @salary += @salary * percent / 100
+    @salary = @salary + salary * percent / 100
   end
 end
