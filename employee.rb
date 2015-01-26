@@ -19,4 +19,8 @@ class Employee
   def satisfactory_performance?
     @satisfactory_performance
   end
+
+  def give_raise(percent)
+    @salary += @salary * percent / 100
+  end
 end

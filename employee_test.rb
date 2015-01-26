@@ -24,8 +24,14 @@ class EmployeeTest < MiniTest::Test
 
   def test_performance_can_be_marked_as_satisfactory
     e = Employee.new('example', 1000.00)
-    e.set_satisfactory_performace(true)
+    e.set_satisfactory_performance(true)
     assert_equal true, e.satisfactory_performance?
+  end
+
+  def test_can_be_given_a_raise
+    e = Employee.new('example', 100.00)
+    e.give_raise(50)
+    assert_equal 150.00, e.salary
   end
 
 end
