@@ -20,4 +20,12 @@ class DepartmentTest < MiniTest::Test
     assert_equal 1, d.employees.length
   end
 
+  def test_a_department_can_calculate_the_total_salary_of_its_employees
+    d = Department.new('example')
+    e = Employee.new('name', 100)
+    d.add_employee(e)
+    assert_equal 100, d.total_salary
+
+  end
+
 end
