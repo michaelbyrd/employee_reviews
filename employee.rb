@@ -5,9 +5,18 @@ class Employee
     @name = name
     @salary = salary
     @reviews = []
+    @satisfactory_performance = true
   end
 
   def add_review(string)
     @reviews << string
+  end
+
+  def set_satisfactory_performance(bool)
+    @satisfactory_performance = bool
+  end
+
+  def satisfactory_performance?
+    @satisfactory_performance
   end
 end
