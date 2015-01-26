@@ -6,8 +6,10 @@ class Department
     @employees = []
   end
 
-  def add_employee(e)
-    @employees << e
+  def add_to_employees(*args)
+    args.each do |e|
+      @employees << e
+    end
   end
 
   def total_salary
